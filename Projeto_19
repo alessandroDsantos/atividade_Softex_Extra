@@ -1,0 +1,90 @@
+Desenvolva um código que simule uma eleição com três candidatos.
+- candidato_X => 889
+- candidato_Y => 847
+- candidato_Z => 515
+- branco => 0
+
+O código deve perguntar se deseja finalizar a votação depois do voto. Caso o número do voto não corresponda a nenhum candidato ou seja branco,
+ele deve ser tratado como nulo. Se for inserido um texto ao invés de número, o código deve retornar uma mensagem para votar novamente.
+
+Quando a votação for finalizada, o código deverá mostrar o vencedor, aquele com o maior número de votos e, também, 
+a quantidade de votos de cada candidato, os brancos e nulos 
+
+*****************************************************************************************************************************************************
+
+encerrar = True 
+cand_x = 0
+cand_y = 0
+cand_z = 0
+branco = 0
+nulo = 0
+
+while(encerrar == True):
+  try:
+    print("------------------------")
+    print("---------Eleição--------")
+    print("---Candidato_X => 889---")
+    print("---Candidato_Y => 847---")
+    print("---Candidato_Z => 515---")
+    print("------Branco => 0-------")
+    print("------------------------")
+    voto = int(input("Digite o número do seu candidato:"))
+    if(voto == 889):
+      cand_x += 1
+    elif(voto == 847):
+      cand_y += 1
+    elif(voto == 515):
+      cand_z += 1
+    elif(voto == 0):
+      branco += 1
+    else:
+      nulo += 1
+
+    fin_vot = input("Deseja finalizar a votação?('s'->Sim/'n'-> Não):")
+    if(fin_vot == 's'):
+      encerrar = False
+    elif(fin_vot == 'n'):
+      encerrar = True 
+    else:
+      print("ERRo")
+
+  except:
+    print("Você digitou um texto, não o número do candidato, vote novamente!!!")
+
+if(cand_x > cand_y) and (cand_x > cand_z) and (cand_x > branco) and (cand_x > nulo):
+  print("O campeão foi o Candidato_X, com",cand_x,"votos!")
+  print("O Candidato_Y, teve",cand_y,"votos!")
+  print("O Candidato_Z, teve",cand_z,"votos!")
+  print("O branco, teve",branco,"votos!")
+  print("O nulo, teve",nulo,"votos!")
+elif(cand_y > cand_x) and (cand_y > cand_z) and (cand_y > branco) and (cand_y > nulo):
+  print("O campeão foi o Candidato_Y, com",cand_y,"votos!")
+  print("O Candidato_X, teve",cand_x,"votos!")
+  print("O Candidato_Z, teve",cand_z,"votos!")
+  print("O branco, teve",branco,"votos!")
+  print("O nulo, teve",nulo,"votos!")
+elif(cand_z > cand_x) and (cand_z > cand_y) and (cand_z > branco) and (cand_z > nulo):
+  print("O campeão foi o Candidato_Z, com",cand_z,"votos!")
+  print("O Candidato_X, teve",cand_x,"votos!")
+  print("O Candidato_Y, teve",cand_y,"votos!")
+  print("O branco, teve",branco,"votos!")
+  print("O nulo, teve",nulo,"votos!")
+elif(branco > cand_x) and (branco > cand_y) and (branco > cand_z) and (branco > nulo):
+  print("Não houve campeão, mas o maior número de votos foi branco:",branco,"votos!")
+  print("O Candidato_X, teve",cand_x,"votos!")
+  print("O Candidato_Y, teve",cand_y,"votos!")
+  print("O Candidato_Z, teve",cand_z,"votos!")
+  print("O nulo, teve",nulo,"votos!")
+elif(nulo > cand_x) and (nulo > cand_z) and (nulo > cand_y) and (nulo > branco):
+  print("Não houve campeão, mas o maior número de votos foi nulo:",nulo,"votos!")
+  print("O Candidato_X, teve",cand_x,"votos!")
+  print("O Candidato_Y, teve",cand_y,"votos!")
+  print("O Candidato_Z, teve",cand_z,"votos!")
+  print("O branco, teve",branco,"votos!")
+else:
+  print("Não houve campeão, houve empete:")
+  print("O Candidato_X, teve",cand_x,"votos!")
+  print("O Candidato_Y, teve",cand_y,"votos!")
+  print("O Candidato_Z, teve",cand_z,"votos!")
+  print("O branco, teve",branco,"votos!")
+  print("O nulo, teve",nulo,"votos!")  
