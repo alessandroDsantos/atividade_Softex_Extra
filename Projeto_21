@@ -1,0 +1,43 @@
+Material 1
+  Classe Pinhao_xadrez
+  Metodo
+  ->Andar_para_frente
+  ->Comer_em_diagonal
+  ->Transformar_em_dama
+  Atributos
+  ->Cor(petro)
+  ->Altura(4 cm)
+  ->Diametro_da_base(1,5 cm)
+  
+Material 2
+  Classe Caneta
+  Metodo
+  ->Escrever
+  ->Desenhar
+  ->Rabiscar
+  Atributos
+  ->Cor(azul)
+  ->Material(acrílico)
+  ->Formato(Hexagonal)
+  
+Abstratos 1
+  Classe Mensagem
+  Metodo
+  ->Enviar
+  ->Receber
+  ->Excluir
+  Atributos
+  ->Tamanho(50kb)
+  ->Tipo(digital)
+  ->Conteudo(Escrito)
+  
+Abstratos 2
+  Classe Programa
+  Metodo
+  ->Executar
+  ->Depurar
+  ->Parar
+  Atributos
+  ->Tamanho(200kb)
+  ->Linguagem(Python)
+  ->Tipo_do_arquivo(ipynb)
