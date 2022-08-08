@@ -1,0 +1,42 @@
+Crie uma classe e insira nela, no mínimo, dois atributos, os quais devem ter um método acessor (get) e um método modificador (set) para cada.
+Defina um objeto para cada atributo e elabore um construtor para criar alguma regra.
+
+A atividade pode ser realizada em qualquer linguagem de programação ou apenas utilizando algoritmos.
+**********************************************************************************************************************************************
+
+class TV:
+  def __init__(self):
+    self.marca = 'LG'
+    self.quantidade = 100
+
+  def get_inf(self):
+    return self.marca, self.quantidade
+
+  def set_nova_inf(self, nova_marca, nova_quant):
+    self.marca = nova_marca
+    if(nova_quant >= 100):
+      self.quantidade = 100
+    else:
+      self.quantidade = nova_quant
+
+elemento = TV()
+
+print("A loja tem essa TV com essa quantidade: ")
+print(elemento.get_inf())
+
+novo_item = input("Digite o nome de um nova marca de TV: ")
+nova_quant = int(input("Digite a quantidade de TVs(a loja não suporta quantidade superior a 100 TVs): "))
+elemento.set_nova_inf(novo_item,nova_quant)
+
+print("A loja tem essas marca de TV com essa quantidade: ")
+print(elemento.get_inf())
+
+***********************************************************************************************************************************************
+Teste:
+
+A loja tem essa TV com essa quantidade: 
+('LG', 100)
+Digite o nome de um nova marca de TV: samsung
+Digite a quantidade de TVs(a loja não suporta quantidade superior a 100 TVs): 150
+A loja tem essas marca de TV com essa quantidade: 
+('samsung', 100)
