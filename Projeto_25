@@ -1,0 +1,28 @@
+**Estruture três códigos, os quais devem conter uma função de manipulação de string que obtenha resultado.
+
+**********************************************************************************************************
+
+def cont_caracter(s):
+  return print("A string tem",len(s),"caracter(s)!")
+
+def so_letra(s):
+  if(s.isalpha() == True):
+    return print("A string é constituida apenas por letras!")
+  else:
+    return print("Não há apenas letras!")
+
+def primeira_maiuscula(s):
+  return s.title()   
+
+string = input("Digite um elemento do tipo string: ")
+cont_caracter(string)
+so_letra(string)
+primeira_maiuscula(string)
+
+***********************************************************************************************************
+Resposta:
+
+Digite um elemento do tipo string: aLESSANDRO1
+A string tem 11 caracter(s)!
+Não há apenas letras!
+'Alessandro1'
