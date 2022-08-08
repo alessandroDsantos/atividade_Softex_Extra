@@ -1,0 +1,19 @@
+**Crie dois pacotes baseados nas atribuições de uma empresa e inclua classes neles. Lembre-se de trabalhar com os padrões Java.
+
+*******************************************************************************************************************************
+
+package net.onepieceex
+
+public class conteudo_digital{
+  String anime;
+  int episodio;
+}
+
+*******************************
+
+package br.com.tntsports
+
+public class noticia{
+  String futebol;
+  String basquete;
+}
