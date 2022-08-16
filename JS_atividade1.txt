@@ -1,0 +1,20 @@
+https://tntsports.com.br/
+
+Tag <a></a> foi utilizada para ao click na imagem da logo marca, da TNTSPORT, carregar a página inicial.
+
+<a class="header__logo" href="/" title="Voltar ao início">
+	<img src="/__export/1610630716503/sites/esporteinterativo/arte/logo_20210114.svg" class="logo__black" alt="Logo" height="34" width="192">
+	<img src="/__export/1610630716641/sites/esporteinterativo/arte/logo-semiblanco_20210114.svg" class="logo__white" alt="Logo" height="34" width="192">
+</a>
+
+A página da TNTSPORT apresenta códigos em JavaScript.
+
+
+
+https://www.rico.com.vc/
+
+Tag <button></button> foi utilizada para ao ser apertada, enviar o usúario a uma página de cadastro de conta.
+
+<button type="button" tabindex="0" aria-label="Criar minha conta"></button>
+
+A página da Rico apresenta códigos em JavaScript.
