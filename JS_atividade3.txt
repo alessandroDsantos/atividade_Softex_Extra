@@ -1,0 +1,9 @@
+Exemplo de dados no meu cotidiano:
+1º)Bateria do Celular
+2º)Volume da TV
+3º)Oximetro
+
+Exemplo de dados usados na internet:
+1º)Conexão com a internet
+2º)Páginas de sites
+3º)Saldo no Banco
