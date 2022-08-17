@@ -1,0 +1,2 @@
+	Para o desenvolvimento de programas utilizado JavaScript, utilizei o Visual Studio Code(VScode), que é um software semelhante ao Bloco de Nota, mas com funcionalidades adicionais.
+O VScode é um editor de códigos, que não é focado em uma única linguagem. O VScode é customizável, tanto esteticamente como na sua funcionalidade, através de plugins desenvolvido pela comunidade, deixa esse editor o mais utilizado no mundo.
