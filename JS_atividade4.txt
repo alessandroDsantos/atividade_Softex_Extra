@@ -1,18 +1,18 @@
 Funcionalidade: 
 	
-	O Proxy é um padrão Estrutural definido pelo GoF (Gang of Four). O 	seu objetivo principal é encapsular um objeto através de um outro 		objeto que possui a mesma interface, de forma que o segundo 			objeto, conhecido como “Proxy”, controla o acesso ao primeiro, que 	é o objeto real.
+	O Proxy é um padrão Estrutural definido pelo GoF (Gang of Four). O seu objetivo principal é encapsular um objeto através de um outro objeto que possui a mesma 	interface, de forma que o segundo objeto, conhecido como “Proxy”, controla o acesso ao primeiro, que é o objeto real.
 
 Vantagens X Desvantagens
 
 Prós: 
-	1)Você pode controlar o objeto do serviço sem os clientes ficarem 		sabendo.
+	1)Você pode controlar o objeto do serviço sem os clientes ficarem sabendo.
 	
-	2)Você pode gerenciar o ciclo de vida de um objeto do serviço 			quando 	os clientes não se importam mais com ele.
+	2)Você pode gerenciar o ciclo de vida de um objeto do serviço quando os clientes não se importam mais com ele.
 	
-	3)Princípio aberto/fechado. Você pode introduzir novos proxies sem 	mudar o serviço ou clientes.
+	3)Princípio aberto/fechado. Você pode introduzir novos proxies sem mudar o serviço ou clientes.
 
 Contras:
-	1)O código pode ficar mais complicado uma vez que você precisa 		introduzir uma série de novas classes.
+	1)O código pode ficar mais complicado uma vez que você precisa introduzir uma série de novas classes.
 
 	2)A resposta de um serviço pode ter atrasos.
 
