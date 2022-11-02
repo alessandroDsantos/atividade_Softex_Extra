@@ -1,0 +1,6 @@
+Modelagem:
+    -Análise de requisito(fase inicial): Identificação dos requisitos que constam em um banco de dados;
+    -Projeto conceitual: Um esquema é gerado a partir da base de informação coletada pela análise de requisitos, utilizando um modelo de dados conceitual de alto nível,
+    o Modelo Entidade-Relacionamento(MER);
+    -Projeto lógico: É uma etapa do processo onde o mapeamento do projeto conceitual é elaborado, tem como resultado o esquema detalhado do banco de dados.
+    -Projeto físico: Nessa etapa, são definidos as estruturas de armazenamento, os índices e a organização de arquivos do banco de dados.
