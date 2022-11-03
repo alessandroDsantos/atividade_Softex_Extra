@@ -1,0 +1,18 @@
+Normalização de dados: Serve para evitar as anomalias nas tabelas, facilitar a manutenção, aumentar a performace e manter a integridade dos dados.
+  -Formas normais:
+    -Primeira:1º)Só aceita valores atômicos.
+              2º)Possui chave primária.
+              3º)Nela não existem grupos de atributos repetidos.
+              4º)Não existem atributos multivalorados ou relações aninhadas.
+    -Segunda:1º)Obrigatoriamente tem que esta na primeira forma normal.
+             2º)Não deve existir atributos compostos.
+             3º)Nem atributos multivalorados nem dependência parcial.
+             4º)Exige que todas as relações tenham dependência total.
+    -Terceira:1º)Deve esta na segunda forma normal.
+              2º)Todos os atributos da tabela devem ser independentes no funcionamento.
+              3º)Devem ter dependência excluviva da chave primária da tabela.
+    -Boyce CODD(FNBC):1º)É uma melhoria da terceira forma normal.
+                      2º)Utilizada quando a tabela possui mais de uma chave candidata.
+                      3º)A FNBC serve para separar as novas tabelas e os valores que ainda estejam redundantes.
+            
+       
