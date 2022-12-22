@@ -1,0 +1,70 @@
+class Veiculo {
+    constructor(marca, cor, nRodas) {
+        this.marca = marca;
+        this.cor = cor;
+        this.nRodas = nRodas;
+    }
+    clone() {
+    }
+}
+
+class Carro extends Veiculo {
+    constructor(modelo, marca, cor, nRodas) {
+        super(marca, cor, nRodas);
+        this.modelo = modelo;
+    }
+    clone() {
+        let carroVW = new Carro(this.modelo, this.marca, this.cor, this.nRodas);
+        return carroVW;
+    }
+    represent() {
+        return console.log('-Metodo represent do Carro')
+    }
+}
+
+class Moto extends Veiculo {
+    constructor(modelo, marca, cor, nRodas) {
+        super(marca, cor, nRodas);
+        this.modelo = modelo;
+    }
+    clone() {
+        let motoHonda = new Moto(this.modelo, this.marca, this.cor, this.nRodas);
+        return motoHonda;
+    }
+    represent() {
+        return console.log('-Metodo represent da Moto')
+    }
+}
+
+class Aplicacao {
+    criarObj(obj1, obj2) {
+        cadeiaVeiculo.push(obj1);
+        cadeiaVeiculo.push(obj2);
+    }
+
+    cloneObj(array) {
+        for (let i = 0; i < 2; i++) {
+            let clone = Object.create(array[i])
+            cadeiaVeiculoClone.push(clone)
+        }
+    }
+}
+
+
+let carro = new Carro('UP', 'VW', 'Branco', 4);
+let moto = new Moto('PCX', 'Honda', 'Azul', 2);
+let aplicacao = new Aplicacao;
+let cadeiaVeiculo = [];
+let cadeiaVeiculoClone = [];
+
+aplicacao.criarObj(carro.clone(), moto.clone());
+aplicacao.cloneObj(cadeiaVeiculo);
+console.log(`Veículos`);
+console.log(cadeiaVeiculo);
+console.log(`\nClone de cada elemento Veículos`);
+console.log(cadeiaVeiculoClone)
+
+console.log(`\nRetorno da função represent de cada elemento desse novo array de clones de veículos.`);
+for (let i = 0; i < cadeiaVeiculoClone.length; i++) {
+    cadeiaVeiculoClone[i].represent()
+}
