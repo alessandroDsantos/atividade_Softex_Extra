@@ -1,0 +1,31 @@
+class ComputadorDesktop:
+  def __init__(self, cpu, ram, hd):
+    self.tipo = "PC"
+    self.cpu = cpu
+    self.ram = ram
+    self.hd = hd
+  
+  def __str__(self):
+    print(self.tipo, self.cpu, self.ram, self.hd)
+
+class ComputadorServer:
+  def __init__(self, cpu, ram, hd):
+    self.tipo = "Server"
+    self.cpu = cpu
+    self.ram = ram
+    self.hd = hd
+  
+  def __str__(self):
+    print(self.tipo, self.cpu, self.ram, self.hd)
+
+class fabrica:
+  def criarmaquina(self, tipo):#A variavel tipo não recebe o valor 
+    if tipo == "PC":
+        return ComputadorDesktop("Intel","16Gb","500Gb")
+    else:
+        return ComputadorServer("AMD","128Gb","8000Gb")
+
+maquina1 = fabrica.criarmaquina("PC")# criarmaquina() missing 1 required positional argument: 'tipo'
+maquina2 = fabrica.criarmaquina("Server")
+maquina1.__str__()
+maquina2.__str__()
