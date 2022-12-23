@@ -1,0 +1,36 @@
+from abc import ABC, abstractmethod
+
+class Observador(ABC):
+  @abstractmethod
+  def atualizar(self):
+    pass
+
+class Pessoa(Observador):
+  def __init__(self):
+    self.acordada = False
+
+  def esta_acordada(self):
+    return self.acordada
+
+  def atualizar(self):
+    print("Acordei!")
+    self.acordada = True
+
+class Som:
+  def __init__(self):
+    self.barulho = False 
+    self.descansando = []
+
+  def adicionaPessoa(self, pessoa: type[Observador]):
+    self.descansando.append(pessoa)
+
+  def estado_som(self):
+    return self.barulho
+
+  def tocar(self):
+    self.barulho = True 
+    for pessoa in self.descansando:
+      pessoa.atualizar()
+
+    self.descansando = []
+
