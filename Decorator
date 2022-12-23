@@ -1,0 +1,89 @@
+class Sanduiche {
+    getPrice() {}
+}
+
+class Carne {
+    constructor(sanduiche) {
+        this.sanduiche = sanduiche;
+    }
+    getPrice() {
+        return 7.49;
+    }
+
+}
+
+class Bacon {
+    constructor(sanduiche) {
+        this.sanduiche = sanduiche;
+    }
+    getPrice() {
+        return 7.49;
+    }
+}
+
+class Mussarela {
+    constructor(sanduiche) {
+        this.sanduiche = sanduiche;
+    }
+    getPrice() {
+        return 7.49;
+    }
+}
+
+class FrangoAssado {
+    constructor(sanduiche) {
+        this.sanduiche = sanduiche;
+    }
+
+    getPrice() {
+        return 4.50
+    }
+
+}
+
+class Pepperoni extends Sanduiche {
+    constructor(sanduiche) {
+        super();
+        this.sanduiche = sanduiche;
+    }
+    getPrice() {
+        return this.sanduiche.getPrice() + 0.99;
+    }
+}
+
+class QueijoMussarela extends Sanduiche {
+    constructor(sanduiche) {
+        super();
+        this.sanduiche = sanduiche;
+    }
+    getPrice() {
+        return this.sanduiche.getPrice() + 2.00;
+    }
+}
+
+let carne = new Carne();
+let carnePepperoni = new Pepperoni(carne);
+let carneQueijoMussarela = new QueijoMussarela(carne);
+let bacon = new Bacon();
+let baconPepperoni = new Pepperoni(bacon);
+let baconQueijoMussarela = new QueijoMussarela(bacon);
+let mussarela = new Mussarela();
+let mussarelaPepperoni = new Pepperoni(mussarela);
+let mussarelaQueijoMussarela = new QueijoMussarela(mussarela);
+let frangoAssado = new FrangoAssado();
+let frangoAssadoPepperoni = new Pepperoni(frangoAssado);
+let frangoAssadoQueijoMussarela = new QueijoMussarela(frangoAssado);
+
+console.log(`Sanduiches:
+-Carne->R$${carne.getPrice()};
+add Pepperoni->R$${carnePepperoni.getPrice()};
+add Queijo->R$${carneQueijoMussarela.getPrice()};
+-Bacon->R$${bacon.getPrice()};
+add Pepperoni->R$${baconPepperoni.getPrice()}
+add Queijo->R$${baconQueijoMussarela.getPrice()}
+-Mussarela->R$${mussarela.getPrice()};
+add Pepperoni->R$${mussarelaPepperoni.getPrice()}
+add Queijo->R$${mussarelaQueijoMussarela.getPrice()}
+-rango Assado->R$${frangoAssado.getPrice()}
+add Pepperoni->R$${frangoAssadoPepperoni.getPrice()}
+add Queijo->R$${frangoAssadoQueijoMussarela.getPrice()}`);
