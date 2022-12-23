@@ -1,0 +1,46 @@
+class Calculadora {
+  constructor(n1, n2) {
+    this.n1 = n1
+    this.n2 = n2
+  }
+  calcular() {}
+}
+
+class Soma extends Calculadora {
+  calcular() {
+    return this.n1 + this.n2
+  }
+}
+
+class Subtracao extends Calculadora {
+  calcular() {
+    return this.n1 - this.n2
+  }
+}
+
+class Multiplicacao extends Calculadora {
+  calcular() {
+    return this.n1 * this.n2
+  }
+}
+
+let x = 25
+let y = 5
+let op = '*'
+
+switch (op) {
+  case '+':
+    resultado = new Soma(x, y)
+    console.log(`A Soma entre ${x} + ${y} = ${resultado.calcular()}`)
+    break
+  case '-':
+    resultado = new Subtracao(x, y)
+    console.log(`A Subtracao entre ${x} - ${y} = ${resultado.calcular()}`)
+    break
+  case '*':
+    resultado = new Multiplicacao(x, y)
+    console.log(`A Multiplicacao entre ${x} * ${y} = ${resultado.calcular()}`)
+    break
+  default:
+    console.log('Numero não reconhecido')
+}
