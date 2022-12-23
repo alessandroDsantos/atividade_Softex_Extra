@@ -1,0 +1,40 @@
+class Pato:
+
+	def __init__(self):
+		self.name = "Pato"
+
+	def somPato(self):
+		return "Quack Quack!"
+
+class Galinha:
+
+	def __init__(self):
+		self.name = "Galinha"
+
+	def somGalinha(self):
+		return "cocoricó!"
+
+class Adapter:
+
+	def __init__(self, obj, **adapted_methods):
+		self.obj = obj
+		self.__dict__.update(adapted_methods)
+
+	def __getattr__(self, attr):
+		return getattr(self.obj, attr)
+
+	def original_dict(self):
+		return self.obj.__dict__
+
+if __name__ == "__main__":
+
+	objects = []
+
+	pato = Pato()
+	objects.append(Adapter(pato, som = pato.somPato))
+
+	galinha = Galinha()
+	objects.append(Adapter(galinha, som = galinha.somGalinha))
+
+	for obj in objects:
+	  print("{0} faz esse som: {1}".format(obj.name, obj.som()))
