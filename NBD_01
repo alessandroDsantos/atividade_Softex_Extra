@@ -9,4 +9,32 @@ De acordo com os conceitos estudados, exiba os resultados das consultas das oper
 - Exiba o resultado da intersecção entre a tabela ALUNO(PNome, UNome) e a tabela PROFESSOR;
 - Exiba o resultado da diferença entre a tabela ALUNO(PNome, UNome) e a tabela PROFESSOR. 
 
-Aluno = σ nota>7,0 (Aluno)
+SELECT * FROM aluno WHERE nota >= 7.0;
+SELECT * FROM aluno WHERE serie = '1º ano' AND nota = 8.0;
+SELECT nome, nota FROM aluno;
+
+CREATE TABLE professor (
+id INT NOT NULL AUTO_INCREMENT,
+primeiro_nome VARCHAR(25),
+ultimo_nome VARCHAR (25),
+PRIMARY KEY(id)
+);
+
+CREATE TABLE aluno (
+id INT NOT NULL AUTO_INCREMENT,
+primeiro_nome VARCHAR(25),
+ultimo_nome VARCHAR (25),
+PRIMARY KEY(id)
+);
+
+SELECT * FROM aluno 
+UNION
+SELECT * FROM professor;
+
+SELECT * FROM aluno 
+INTERSECT
+SELECT * FROM professor;
+
+SELECT * FROM aluno 
+EXCEPT
+SELECT * FROM professor;
