@@ -1,0 +1,13 @@
+Sistemas de Bancos de Dados relacionais:
+-Oracle
+-SQL Server
+-MySQL
+-PostgreSQL
+-MariaDB
+
+Sistemas de Bancos de Dados não relacionais (NoSQL):
+-MongoDB
+-Cassandra
+-Amazon DynamoDB
+-CouchDB 
+-Redis
