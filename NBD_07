@@ -1,1 +1,28 @@
 Crie uma função que some todos os clientes cadastrados em uma loja durante um dia.
+
+CREATE TABLE clientes (
+	id INT NOT NULL AUTO_INCREMENT,
+    	nome VARCHAR(25) NOT NULL,
+    	cpf VARCHAR(15) NOT NULL,
+   	data_cadastro DATE NOT NULL,
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+INSERT INTO clientes (nome, cpf, data_cadastro) VALUES ('Carlos', '09912234455', '2022-11-26');
+INSERT INTO clientes (nome, cpf, data_cadastro) VALUES ('Maria','09922144344', '2022-11-26');
+INSERT INTO clientes (nome, cpf, data_cadastro) VALUES ('Fernando', '09833255466', '2022-11-27');
+INSERT INTO clientes (nome, cpf, data_cadastro) VALUES ('Sofia', '09911155678', '2022-11-27');
+INSERT INTO clientes (nome, cpf, data_cadastro) VALUES ('Marcos', '09928654679', '2022-11-27');
+
+DELIMITER //
+CREATE FUNCTION quantidadeClientesCadastrados (dia DATE) 
+RETURNS INT 
+BEGIN
+	DECLARE quantidade INT;
+	SELECT COUNT(id) INTO quantidade FROM clientes WHERE data_cadastro = dia; 
+	RETURN quantidade;
+END //
+DELIMITER ;
+
+SELECT quantidadeClientesCadastrados('2022-11-26');
+
