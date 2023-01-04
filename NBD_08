@@ -1,1 +1,13 @@
 Após uma varredura rápida no sistema da sua empresa, foi identificada a necessidade de melhorar a segurança dos dados. Por isso, você deve desenvolver um novo banco de dados. Explique quais são os pilares da segurança de dados que devem ser seguidos.
+
+Confidencialidade, integridade e disponibilidade: os três pilares da segurança da informação.
+
+-Confidencialidade:
+A confidencialidade tem a ver com a privacidade dos dados da organização. Esse conceito se relaciona às ações tomadas para assegurar que informações confidenciais e críticas não sejam roubadas dos sistemas organizacionais por meio de cibe ataques, espionagem, entre outras práticas.
+
+-Integridade:
+Integridade corresponde à preservação da precisão, consistência e confiabilidade das informações e sistemas pela empresa ao longo dos processos ou de seu ciclo de vida.
+É importante que os dados circulem ou sejam armazenados do mesmo modo como foram criados, sem que haja interferência externa para corrompê-los, comprometê-los ou danificá-los.
+
+-Disponibilidade:
+A disponibilidade está relacionada ao tempo e à acessibilidade que se tem dos dados e sistemas da empresa, ou seja, se eles podem ser consultados a qualquer momento pelos colaboradores.
