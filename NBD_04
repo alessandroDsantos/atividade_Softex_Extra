@@ -1,1 +1,42 @@
 Desenvolva um banco de dados que relacione tabelas através de chaves estrangeiras ou nomes de colunas iguais. Após isso, realize todos os comandos Joins estudados.
+
+CREATE TABLE alunos_escola_A (
+	id INT NOT NULL AUTO_INCREMENT,
+    	nome VARCHAR(30) NOT NULL,
+    	nascimento DATE,
+   	sexo ENUM('M','F'),
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE alunos_escola_B (
+	id INT NOT NULL AUTO_INCREMENT,
+    	nome VARCHAR(30) NOT NULL,
+    	nascimento DATE,
+   	sexo ENUM('M','F'),
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+INSERT INTO alunos_escola_a(nome,nascimento,sexo) VALUE ('Carlos','1993-01-02','M');
+INSERT INTO alunos_escola_a(nome,nascimento,sexo) VALUE ('João','1999-04-02','M');
+INSERT INTO alunos_escola_a(nome,nascimento,sexo) VALUE ('Maria','2000-07-21','F');
+INSERT INTO alunos_escola_a(nome,nascimento,sexo) VALUE ('Carla','2002-05-05','F');
+INSERT INTO alunos_escola_a(nome,nascimento,sexo) VALUE ('Edson','1989-09-19','M');
+
+INSERT INTO alunos_escola_b(nome,nascimento,sexo) VALUE ('Carlos','1991-04-12','M');
+INSERT INTO alunos_escola_b(nome,nascimento,sexo) VALUE ('João','1995-07-09','M');
+INSERT INTO alunos_escola_b(nome,nascimento,sexo) VALUE ('Juliete','2006-08-27','F');
+INSERT INTO alunos_escola_b(nome,nascimento,sexo) VALUE ('Carla','1997-10-05','F');
+INSERT INTO alunos_escola_b(nome,nascimento,sexo) VALUE ('Henrique','1988-12-19','M');
+
+SELECT a.nome, b.nome FROM alunos_escola_a AS A INNER JOIN alunos_escola_b AS B ON a.nome = b.nome;
+SELECT a.nome, b.nome FROM alunos_escola_a AS A LEFT JOIN alunos_escola_b AS B ON a.nome = b.nome;
+SELECT a.nome, b.nome FROM alunos_escola_a AS A RIGHT JOIN alunos_escola_b AS B ON a.nome = b.nome;
+SELECT a.nome, b.nome FROM alunos_escola_a AS A LEFT JOIN alunos_escola_b AS B ON a.nome = b.nome
+UNION
+SELECT a.nome, b.nome FROM alunos_escola_a AS A RIGHT JOIN alunos_escola_b AS B ON a.nome = b.nome;
+
+SELECT a.nome, b.nome FROM alunos_escola_a AS A LEFT JOIN alunos_escola_b AS B ON a.nome = b.nome WHERE b.nome IS NULL;
+SELECT a.nome, b.nome FROM alunos_escola_a AS A RIGHT JOIN alunos_escola_b AS B ON a.nome = b.nome WHERE a.nome IS NULL;
+SELECT a.nome, b.nome FROM alunos_escola_a AS A RIGHT JOIN alunos_escola_b AS B ON a.nome = b.nome  
+UNION
+SELECT a.nome, b.nome FROM alunos_escola_a AS A LEFT JOIN alunos_escola_b AS B ON a.nome = b.nome WHERE b.nome IS NULL OR a.nome IS NULL;
