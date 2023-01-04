@@ -1,1 +1,31 @@
 Você deve criar uma tabela para executar uma trigger que relacione algum comando, como: insert, select, delete ou update.
+
+CREATE TABLE clientes (
+	id INT NOT NULL AUTO_INCREMENT,
+    	nome VARCHAR(30) NOT NULL,
+    	nascimento DATE,
+    	sexo ENUM('M','F'),
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+CREATE TABLE clientes_Historico (
+	id INT NOT NULL AUTO_INCREMENT,
+    	idCliente INT NOT NULL,
+    	nome VARCHAR(30) NOT NULL,
+    	nascimento DATE,
+    	sexo ENUM('M','F'),
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+CREATE TRIGGER backup_clientes2 
+BEFORE UPDATE
+ON clientes
+FOR EACH ROW
+INSERT INTO clientes_historico(idCliente, nome, nascimento, sexo) VALUES (old.id, old.nome, old.nascimento, old.sexo);
+
+INSERT INTO clientes(nome,nascimento,sexo) VALUE ('Carlos','1993-08-31','M');
+INSERT INTO clientes(nome,nascimento,sexo) VALUE ('Maria','1983-02-17','F');
+INSERT INTO clientes(nome,nascimento,sexo) VALUE ('João','2005-06-22','M');
+
+UPDATE clientes SET nome = 'Carlos Eduardo' WHERE id = 1;
+
