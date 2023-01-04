@@ -1,0 +1,49 @@
+Crie um pequeno servidor web que contenha várias rotas.
+Em cada rota, você deverá fazer o controle do fluxo de requisições de maneira estática ou dinâmica, alterne entre essas formas usando placeholders e query.
+
+import express from 'express';
+
+const router = express.Router();
+const app = express();
+
+app.listen(8080, () => {
+  console.log(`O servidor está rodando na porta ${PORT}`);
+});
+
+router.use(express.json());
+
+const carros = ['HB20', 'Celta', 'Gol', 'Polo', 'UP', 'Mobi'];
+
+router.get('/carros', (req, res) => {
+  return res.status(200).json(carros);
+});
+
+router.get('/querycarros', (req, res) => {
+  const { id } = req.query;
+
+  return res.status(200).json(carros[id]);
+});
+
+router.post('/carros', (req, res) => {
+  const { name } = req.body;
+  carros.push(name);
+
+  return res.status(201).json(carros);
+});
+
+router.put('/carros/:id', (req, res) => {
+  const { id } = req.params;
+  const { name } = req.body;
+
+  carros[id] = name;
+
+  return res.status(201).json(carros);
+});
+
+router.delete('/carros', (req, res) => {
+  const { id } = req.query;
+
+  frutas.splice(id, 1);
+
+  return res.json({ Message: 'Carro excluida' });
+});
