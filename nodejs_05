@@ -1,0 +1,23 @@
+import express from "express";
+
+const app = express();
+
+app.get('/', (req, resp) => {
+  resp.send("GET");
+});
+
+app.post('/post', (req, resp) => {
+  resp.send("POST");
+});
+
+app.put('/put', (req, resp) => {
+  resp.send("PUT");
+});
+
+app.post('/delete', (req, resp) => {
+  resp.send("DELETE");
+});
+
+app.listen(8080, () => {
+  console.log(`Servidor rodando na porta ${porta}`);
+});
