@@ -1,0 +1,15 @@
+import express from "express";
+
+const app = express();
+
+app.get('/listar/50', (req, resp) => {
+  resp.send("HTTP 404");
+});
+
+app.get('/listar/10', (req, resp) => {
+  resp.send("HTTP 200");
+});
+
+app.listen(8080, () => {
+  console.log(`Servidor rodando na porta ${porta}`);
+});
