@@ -1,0 +1,1 @@
+Você deve criar uma tabela para executar uma trigger que relacione algum comando, como: insert, select, delete ou update.
