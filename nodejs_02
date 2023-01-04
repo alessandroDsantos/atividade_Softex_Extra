@@ -1,0 +1,11 @@
+import http from "http";
+
+const servidor = http.createServer();
+
+servidor.on("request", (request, response) => {
+    response.end("<h1>Ola Mundo!<h1>");
+});
+
+servidor.listen(8080, 'localhost',() => {
+    console.log(`Servidor iniciado na porta ${PORTA}`);
+})
