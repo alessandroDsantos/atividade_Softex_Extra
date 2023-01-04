@@ -1,1 +1,22 @@
 Uma empresa precisa criar um relatório que faça um levantamento diário da quantidade de produtos comprados no dia. Para isso, crie um procedure que será usado para agilizar todos os processos.
+
+CREATE TABLE produtos (
+	id INT NOT NULL AUTO_INCREMENT,
+    	nome VARCHAR(25) NOT NULL,
+    	marca VARCHAR(20) NOT NULL,
+    	data_venda DATE NOT NULL,
+    	PRIMARY KEY(id)
+)DEFAULT CHARSET = utf8;
+
+INSERT INTO produtos (nome, marca, data_venda) VALUES ('iPhone 14', 'Aplle', CURDATE());
+INSERT INTO produtos (nome, marca, data_venda) VALUES ('Moto G60','Motorola', CURDATE());
+INSERT INTO produtos (nome, marca, data_venda) VALUES ('Galaxy Z Flip4', 'Samsung', CURDATE());
+INSERT INTO produtos (nome, marca, data_venda) VALUES ('Redmi Note 9', 'Xiaomi', CURDATE());
+
+CREATE PROCEDURE quantidadeProdutoVendido(dia DATE)
+SELECT COUNT(id) 
+AS quantidade_produto_vendido 
+FROM produtos
+WHERE data_venda = dia;
+
+CALL quantidadeProdutoVendido('2022-11-27');
