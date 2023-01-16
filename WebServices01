@@ -1,1 +1,40 @@
+REQ
+POST /consultaAluno HTTP/1.1
+Host:www.backendsoftex.com.br
+Content-Type: text/xml; charset=utf-8
+Content-Length:3453
 
+
+<?xml version='1.0' Encoding='UTF-8' ?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"> 
+	<soap:Body xmlns:soap="http://www.backendsoftex.com.br/consultaAluno">
+		<m:consultaAlunoRequest>
+			<m:matricula>11235813</m:matricula>
+		</m:consultaAlunoRequest>
+	</soap:Body>
+</soap:Envelope>
+
+
+//—---------------------------------
+
+RESP
+HTTP/1.1 200 OK
+Content-Type: text/xml; charset=utf-8
+Content-Length:3453
+
+
+<?xml version='1.0' Encoding='UTF-8' ?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"> 
+	<soap:Body xmlns:soap="http://www.backendsoftex.com.br/consultaAluno">
+		<m:consultaAlunoResponse>
+			<m:nome>Alessandro</m:nome>
+			<m:curso>Back End</m:curso>
+			<m:turno>Noturno</m:turno>
+			<m:dia>Terça</m:dia>
+		</m:consultaAlunoResponse>
+	</soap:Body>
+</soap:Envelope>
+
+
+
+Enviada uma requisição através do método POST para o server www.backendsoftex.com.br, passando como a matrícula como parâmetro e retornando os dados do aluno.
