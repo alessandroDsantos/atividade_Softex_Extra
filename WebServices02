@@ -1,1 +1,40 @@
+GET
+Essa é a requisição mais comum de todas. Através dessa requisição nós pedimos a representação de um recurso: que pode ser um arquivo html, xml, json, etc.
+Um exemlo de requisição GET seria:
 
+GET /entendendo-o-net-core-parte-3-o-coreclr/ HTTP/1.1  
+User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)  
+Host: http://gabsferreira.com  
+Connection: Keep-Alive  
+
+
+POST
+O método POST é utilizado quando queremos criar um recurso. Quando usamos POST, os dados vão no corpo da requisição e não na URI.
+
+PUT
+Requisita que um recurso seja "guardado" na URI fornecida. Se o recurso já existir, ele deve ser atualizado. Se não existir, pode ser criado.
+
+DELETE
+Exclui o recurso especificado.
+
+TRACE
+Devolve a mesma requisição que for enviada veja se houve mudança e/ou adições feitas por servidores intermediários.
+
+OPTIONS
+Retorna os métodos HTTP suportados pelo servidor para a URL especificada.
+
+PATCH
+Serve para atualizar partes de um recurso, e não o recurso todo.
+
+CONNECT
+Converte a requisição de conexão para um túnel TCP/IP transparente, geralmente para facilitar a comunicação criptografada com SSL (HTTPS) através de um proxy 
+HTTP não criptografado.
+
+HEAD
+Retorna somente os cabeçalhos de uma resposta.
+
+
+WSDL é uma notação XML para descrever um serviço da web. Uma definição WSDL indica a um cliente como compor uma solicitação de serviço da web e descreve a interface 
+que é fornecida pelo provedor de serviços da web.
+Uma definição WSDL é dividida em seções separadas que especificam a interface lógica e os detalhes físicos de um serviço da web. Os detalhes físicos incluem 
+informações de terminal, como número da porta HTTP e informações de ligação que especifica como a carga útil SOAP é representada e qual transporte é utilizado.
