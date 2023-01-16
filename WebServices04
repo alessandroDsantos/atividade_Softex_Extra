@@ -1,1 +1,17 @@
+1 - Stateless
+O servidor deve ter todas as solicitações feitas pelo cliente para as compreender.
 
+2 - Cliente Servidor
+Interface regular para clientes dos servidores
+
+3 - Interface uniforme
+Para obter regularidade em aplicações. Se subdivide em quatro: identificação de recurso, manipulação de recursos usando representações, mensagens auto-descritivas; hipermidia como motor do estado da aplicação
+
+4 - Armazenamento em cache
+Melhora o desempenho
+
+5 - Sistema em camadas
+Faz com que a aplicaçãos eja estável limitando cada componente, desacoplando o código.
+
+6 - Codigo sob demanda
+Permite que um código seja baixado e usado dentro do aplicativo
